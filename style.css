@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-family: "Helvetica", "Arial", sans-serif;
   font-weight: 100;
 }
 
@@ -18,20 +18,16 @@ button {
   border-bottom-width: 0px;
   /* float: left; */
   border-radius: 50%;
-  margin: 2px
+  margin: 2px;
 }
 
 .btn_special {
-    background-color: rgb(185, 177, 161)
-}
-
-#reset {
-    font-size: 130%;
+  background-color: rgb(185, 177, 161);
 }
 
 .btn_operator {
-    background-color: #e78814;
-    color: #fff;
+  background-color: #e78814;
+  color: #fff;
 }
 
 .btn_equals {
@@ -40,11 +36,28 @@ button {
 }
 
 .btn_decimal {
-    margin-left: 3px;
+  margin-left: 3px;
 }
 
-.btn_zero {
-    width: 97%;
-    border-radius: 100px
+#reset {
+  font-size: 130%;
 }
 
+#zero {
+  width: 97%;
+  border-radius: 100px;
+}
+
+.result {
+  color: white;
+  font-size: 350%;
+  padding-top: 1em;
+  margin-right: .2em;
+  text-align: right;
+}
+
+.display {
+  background-color: black;
+  margin-left: 25%;
+  margin-right: 25%;
+}
