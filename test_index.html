@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container_vert" id="div_vert">
+        <div class="panel">
+          <p class="result">0</p>
+        </div>
+        <table>
+          <tr class="row 1">
+            <td><button id="reset" class="btn_special">AC</button></td>
+            <td><button id="sign" class="btn_special">&plusmn;</button></td>
+            <td>
+              <button id="percentage" class="btn_special">&percnt;</button>
+            </td>
+            <td><button id="division" class="btn_operator">&div;</button></td>
+          </tr>
+
+          <tr class="row 2">
+            <td><button id="seven" class="btn_number">7</button></td>
+            <td><button id="eight" class="btn_number">8</button></td>
+            <td><button id="nine" class="btn_number">9</button></td>
+            <td>
+              <button id="multiplication" class="btn_operator">&times;</button>
+            </td>
+          </tr>
+
+          <tr class="row 3">
+            <td><button id="four" class="btn_number">4</button></td>
+            <td><button id="five" class="btn_number">5</button></td>
+            <td><button id="six" class="btn_number">6</button></td>
+            <td>
+              <button id="subtraction" class="btn_operator">&minus;</button>
+            </td>
+          </tr>
+
+          <tr class="row 4">
+            <td><button id="one" class="btn_number">1</button></td>
+            <td><button id="two" class="btn_number">2</button></td>
+            <td><button id="three" class="btn_number">3</button></td>
+            <td>
+              <button id="addition" class="btn_operator">&plus;</button>
+            </td>
+          </tr>
+
+          <tr class="row 5">
+            <td colspan="2">
+              <button id="zero" class="btn_number"><p id="zero">0</p></button>
+            </td>
+            <td><button id="point" class="btn_number">.</button></td>
+            <td><button id="equal" class="btn_operator">&equals;</button></td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- --------------------------------------------- -->
+
+      <div class="container_hori" id="div_hori">
+        <div class="panel">
+          <p class="result">0</p>
+        </div>
+        <table>
+          <tr class="row 1">
+            <td><button id="" class="btn_advance">&#40;</button></td>
+            <td><button id="" class="btn_advance">&#41;</button></td>
+            <td><button id="" class="btn_advance">mc</button></td>
+            <td><button id="" class="btn_advance">m+</button></td>
+            <td><button id="" class="btn_advance">m-</button></td>
+            <td><button id="" class="btn_advance">mr</button></td>
+            <td><button id="reset" class="btn_special">AC</button></td>
+            <td><button id="sign" class="btn_special">&plusmn;</button></td>
+            <td>
+              <button id="percentage" class="btn_special">&percnt;</button>
+            </td>
+            <td><button id="division" class="btn_operator">&div;</button></td>
+          </tr>
+
+          <tr class="row 2">
+            <td><button id="seven" class="btn_advance">2<sup>nd</sup></button></td>
+            <td><button id="seven" class="btn_advance">x<sup>2</sup></button></td>
+            <td><button id="seven" class="btn_advance">x<sup>3</sup></button></td>
+            <td><button id="seven" class="btn_advance">x<sup>y</sup></button></td>
+            <td><button id="seven" class="btn_advance">e<sup>x</sup></button></td>
+            <td><button id="seven" class="btn_advance">10<sup>x</sup></button></td>
+            <td><button id="seven" class="btn_number">7</button></td>
+            <td><button id="eight" class="btn_number">8</button></td>
+            <td><button id="nine" class="btn_number">9</button></td>
+            <td>
+              <button id="multiplication" class="btn_operator">&times;</button>
+            </td>
+          </tr>
+
+          <tr class="row 3">
+            <td><button id="seven" class="btn_advance"><sup>1</sup>/<sub>x</sub></button></td>
+            <td><button id="seven" class="btn_advance"><sup>2</sup>&radic;x</button></td>
+            <td><button id="seven" class="btn_advance"><sup>3</sup>&radic;x</button></td>
+            <td><button id="seven" class="btn_advance"><sup>y</sup>&radic;x</button></td>
+            <td><button id="seven" class="btn_advance">ln</button></td>
+            <td><button id="seven" class="btn_advance">log<sub>10</sub></button></td>
+            <td><button id="four" class="btn_number">4</button></td>
+            <td><button id="five" class="btn_number">5</button></td>
+            <td><button id="six" class="btn_number">6</button></td>
+            <td>
+              <button id="subtraction" class="btn_operator">&minus;</button>
+            </td>
+          </tr>
+
+          <tr class="row 4">
+            <td><button id="seven" class="btn_advance">x!</button></td>
+            <td><button id="seven" class="btn_advance">sin</button></td>
+            <td><button id="seven" class="btn_advance">cos</button></td>
+            <td><button id="seven" class="btn_advance">tan</button></td>
+            <td><button id="seven" class="btn_advance">e</button></td>
+            <td><button id="seven" class="btn_advance">EE</button></td>
+            <td><button id="one" class="btn_number">1</button></td>
+            <td><button id="two" class="btn_number">2</button></td>
+            <td><button id="three" class="btn_number">3</button></td>
+            <td>
+              <button id="addition" class="btn_operator">&plus;</button>
+            </td>
+          </tr>
+
+          <tr class="row 5">
+            <td><button id="seven" class="btn_advance">Rad</button></td>
+            <td><button id="seven" class="btn_advance">sinh</button></td>
+            <td><button id="seven" class="btn_advance">cosh</button></td>
+            <td><button id="seven" class="btn_advance">tanh</button></td>
+            <td><button id="seven" class="btn_advance"></button></td>
+            <td><button id="seven" class="btn_advance"></button></td>
+            <td colspan="2">
+              <button id="zero" class="btn_number"><p id="zero">0</p></button>
+            </td>
+            <td><button id="point" class="btn_number">.</button></td>
+            <td><button id="equal" class="btn_operator">&equals;</button></td>
+          </tr>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>

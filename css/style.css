@@ -5,22 +5,12 @@
 }
 
 body {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
-button {
-  height: 45px;
-  width: 45px;
-  font-size: 1.5em;
-  background-color: rgb(46, 46, 46);
-  border: 0px;
-  border-right-width: 0px;
-  border-bottom-width: 0px;
-  border-radius: 50%;
-  margin: 2px;
-}
+/* --------------------------------------------- */
 
-.result {
+#div_vert .result {
   color: white;
   font-size: 350%;
   padding-top: 1em;
@@ -28,7 +18,7 @@ button {
   text-align: right;
 }
 
-.container {
+.container_vert {
   background-color: black;
   display: block;
   text-align: center;
@@ -41,65 +31,186 @@ button {
   padding-bottom: 1em;
 }
 
+#div_vert button {
+  height: 45px;
+  width: 45px;
+  font-size: 1.5em;
+  background-color: rgb(46, 46, 46);
+  border: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-radius: 50%;
+  margin: 2px;
+}
 
-.btn_number {
+#div_vert .btn_number {
   color: white;
   transition: 0.4s;
 }
 
-.btn_number:active {
+#div_vert .btn_number:active {
   background-color: grey;
   transition: 0.05s;
 }
 
-.btn_special {
+#div_vert .btn_special {
   background-color: rgb(185, 177, 161);
   transition: 0.4s;
 }
 
-.btn_special:active {
+#div_vert .btn_special:active {
   background-color: lightgrey;
   transition: 0.05s;
 }
 
-.btn_operator {
+#div_vert .btn_operator {
   background-color: #e78814;
   color: #fff;
   font-size: 1.9em;
-  padding-bottom: .1em;
+  padding-bottom: 0.1em;
   transition: 0.4s;
 }
 
-.btn_operator:active {
+#div_vert .btn_operator:active {
   background-color: #ecb36c;
   transition: 0.05s;
 }
 
-#reset {
+#div_vert #reset {
   font-size: 120%;
   font-weight: 600;
   color: black;
 }
 
-#zero {
+#div_vert #zero {
   width: 97%;
   border-radius: 100px;
   text-align: left;
   padding-left: 0.35em;
 }
 
-#sign {
+#div_vert #sign {
   font-size: 180%;
-  padding-bottom: .2em;
+  padding-bottom: 0.2em;
 }
 
-#percentage {
+#div_vert #percentage {
   font-size: 130%;
   font-weight: 600;
 }
 
-#division {
+#div_vert #division {
   font-size: 200%;
-  padding-bottom: .1em;
+  padding-bottom: 0.1em;
 }
 
+/* --------------------------------------------- */
+
+#div_hori .result {
+  color: white;
+  font-size: 210%;
+  padding-top: .25em;
+  margin-right: 0.2em;
+  text-align: right;
+  padding-right: 0.3em;
+}
+
+.container_hori {
+  background-color: black;
+  display: block;
+  text-align: center;
+  display: grid;
+  place-content: center;
+  width: fit-content;
+  margin: auto;
+  margin-top: 2em;
+  border-radius: 20px;
+  padding: 1.2em;
+  padding-top: 0em;
+  padding-bottom: .5em;
+}
+
+#div_hori button {
+  height: 27px;
+  width: 35px;
+  font-size: 1em;
+  background-color: rgb(46, 46, 46);
+  border: 0px;
+  border-right-width: 0px;
+  border-bottom-width: 0px;
+  border-radius: 20px;
+  margin: .5px;
+}
+
+#div_hori .btn_number {
+  color: white;
+  transition: 0.4s;
+}
+
+#div_hori .btn_number:active {
+  background-color: grey;
+  transition: 0.05s;
+}
+
+#div_hori .btn_special {
+  background-color: rgb(185, 177, 161);
+  transition: 0.4s;
+}
+
+#div_hori .btn_special:active {
+  background-color: lightgrey;
+  transition: 0.05s;
+}
+
+#div_hori .btn_operator {
+  background-color: #e78814;
+  color: #fff;
+  font-size: 1.3em;
+  padding-bottom: 0em;
+  transition: 0.4s;
+  padding-left: .3em;
+}
+
+#div_hori .btn_operator:active {
+  background-color: #ecb36c;
+  transition: 0.05s;
+}
+
+#div_hori .btn_advance {
+  color: white;
+  background-color: rgb(34, 34, 34);
+  font-size: .7em;
+  transition: 0.4s;
+}
+
+#div_hori .btn_advance:active {
+  background-color: grey;
+  transition: 0.05s;
+}
+
+#div_hori #reset {
+  font-size: 90%;
+  font-weight: 600;
+  color: black;
+}
+
+#div_hori #zero {
+  width: 97%;
+  border-radius: 100px;
+  text-align: left;
+  padding-left: 0.45em;
+}
+
+#div_hori #sign {
+  font-size: 120%;
+  padding-bottom: 0.2em;
+}
+
+#div_hori #percentage {
+  font-size: 80%;
+  font-weight: 600;
+}
+
+#div_hori #division {
+  font-size: 130%;
+}
