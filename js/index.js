@@ -126,4 +126,80 @@ document.addEventListener('DOMContentLoaded', function() {
         operand1 = result;
         shouldResetDisplay = true;
     }
+
+    // advanced calculation
+    function advancedCalculate(operation) {
+        let result;
+        let value = parseFloat(currentInput);
+        
+        switch (operation) {
+            case 'square':
+                result = Math.pow(value, 2);
+                break;
+            case 'cube':
+                result = Math.pow(value, 3);
+                break;
+            case 'sqrt':
+                result = Math.sqrt(value);
+                break;
+            case 'log':
+                result = Math.log10(value);
+                break;
+            case 'ln':
+                result = Math.log(value);
+                break;
+            case 'exp':
+                result = Math.exp(value);
+                break;
+            case 'sin':
+                result = Math.sin(value);
+                break;
+            case 'cos':
+                result = Math.cos(value);
+                break;
+            case 'tan':
+                result = Math.tan(value);
+                break;
+            default:
+                return;
+        }
+
+        currentInput = result.toString();
+        if (currentInput.length > 9) {
+            currentInput = currentInput.slice(0, maxLength);
+        }
+        updateDisplay();
+    }
+
+    document.getElementById('square').addEventListener('click', function() {
+        advancedCalculate('square');
+    });
+
+    document.getElementById('sqrt').addEventListener('click', function() {
+        advancedCalculate('sqrt');
+    });
+
+    document.getElementById('log').addEventListener('click', function() {
+        advancedCalculate('log');
+    });
+
+    document.getElementById('ln').addEventListener('click', function() {
+        advancedCalculate('ln');
+    });
+
+    document.getElementById('exp').addEventListener('click', function() {
+        advancedCalculate('exp');
+    });
+
+    document.getElementById('sin').addEventListener('click', function() {
+        advancedCalculate('sin');
+    });
+
+    document.getElementById('cos').addEventListener('click', function() {
+        advancedCalculate('cos');
+    });
+
+    document.getElementById('tan').addEventListener('click', function() {
+        advancedCalculate('tan');
+    });
 });
