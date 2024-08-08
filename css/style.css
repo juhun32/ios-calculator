@@ -1,7 +1,8 @@
 * {
   margin: 0;
-  font-family: "Lato";
-  font-weight: 500;
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  /* letter-spacing: -0.1em; */
 }
 
 body {
@@ -13,6 +14,7 @@ body {
 #div_vert .result {
   color: white;
   font-size: 350%;
+  font-weight: 200;
   padding-top: 1em;
   margin-right: 0.2em;
   text-align: right;
@@ -215,3 +217,4 @@ body {
 #div_hori #division {
   font-size: 130%;
 }
+
