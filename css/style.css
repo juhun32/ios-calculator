@@ -22,15 +22,17 @@ body {
 
 .container_vert {
   background-color: black;
-  display: block;
+  display: absolute;
   text-align: center;
-  display: grid;
-  place-content: center;
-  width: fit-content;
+  /* display: grid; */
+  place-content: end;
+  bottom: 0px;
+  width: 215px;
+  height: 420px;
   margin: auto;
   border-radius: 20px;
   padding: 0.3em;
-  padding-bottom: 1em;
+  padding-bottom: 1.5em;
 }
 
 #div_vert button {
@@ -218,3 +220,8 @@ body {
   font-size: 130%;
 }
 
+.footer {
+  color: black;
+  text-align: center;
+  padding-bottom: 1em;
+}

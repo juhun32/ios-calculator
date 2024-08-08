@@ -7,6 +7,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let shouldResetDisplay = false;
 
     function updateDisplay() {
+        if (currentInput.length > 7) {
+            display.style.fontSize = '250%';
+        }
         display.textContent = currentInput;
         console.log(currentInput);
     }
@@ -45,6 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('reset').addEventListener('click', function() {
         AC.textContent = 'AC';
         currentInput = '0';
+         display.style.fontSize = '350%'
         operator = null;
         operand1 = null;
         shouldResetDisplay = false;

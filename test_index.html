@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculator</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
@@ -68,12 +71,12 @@
         </div>
         <table>
           <tr class="row 1">
-            <td><button id="" class="btn_advance">&#40;</button></td>
-            <td><button id="" class="btn_advance">&#41;</button></td>
-            <td><button id="" class="btn_advance">mc</button></td>
-            <td><button id="" class="btn_advance">m+</button></td>
-            <td><button id="" class="btn_advance">m-</button></td>
-            <td><button id="" class="btn_advance">mr</button></td>
+            <td><button id="parleft" class="btn_advance">&#40;</button></td>
+            <td><button id="parright" class="btn_advance">&#41;</button></td>
+            <td><button id="mc" class="btn_advance">mc</button></td>
+            <td><button id="mplus" class="btn_advance">m+</button></td>
+            <td><button id="mminus" class="btn_advance">m-</button></td>
+            <td><button id="mr" class="btn_advance">mr</button></td>
             <td><button id="reset" class="btn_special">AC</button></td>
             <td><button id="sign" class="btn_special">&plusmn;</button></td>
             <td>
@@ -83,12 +86,24 @@
           </tr>
 
           <tr class="row 2">
-            <td><button id="seven" class="btn_advance">2<sup>nd</sup></button></td>
-            <td><button id="seven" class="btn_advance">x<sup>2</sup></button></td>
-            <td><button id="seven" class="btn_advance">x<sup>3</sup></button></td>
-            <td><button id="seven" class="btn_advance">x<sup>y</sup></button></td>
-            <td><button id="seven" class="btn_advance">e<sup>x</sup></button></td>
-            <td><button id="seven" class="btn_advance">10<sup>x</sup></button></td>
+            <td>
+              <button id="second" class="btn_advance">2<sup>nd</sup></button>
+            </td>
+            <td>
+              <button id="square" class="btn_advance">x<sup>2</sup></button>
+            </td>
+            <td>
+              <button id="cube" class="btn_advance">x<sup>3</sup></button>
+            </td>
+            <td>
+              <button id="xypow" class="btn_advance">x<sup>y</sup></button>
+            </td>
+            <td>
+              <button id="expow" class="btn_advance">e<sup>x</sup></button>
+            </td>
+            <td>
+              <button id="tenxpow" class="btn_advance">10<sup>x</sup></button>
+            </td>
             <td><button id="seven" class="btn_number">7</button></td>
             <td><button id="eight" class="btn_number">8</button></td>
             <td><button id="nine" class="btn_number">9</button></td>
@@ -98,12 +113,30 @@
           </tr>
 
           <tr class="row 3">
-            <td><button id="seven" class="btn_advance"><sup>1</sup>/<sub>x</sub></button></td>
-            <td><button id="seven" class="btn_advance"><sup>2</sup>&radic;x</button></td>
-            <td><button id="seven" class="btn_advance"><sup>3</sup>&radic;x</button></td>
-            <td><button id="seven" class="btn_advance"><sup>y</sup>&radic;x</button></td>
-            <td><button id="seven" class="btn_advance">ln</button></td>
-            <td><button id="seven" class="btn_advance">log<sub>10</sub></button></td>
+            <td>
+              <button id="divx" class="btn_advance">
+                <sup>1</sup>/<sub>x</sub>
+              </button>
+            </td>
+            <td>
+              <button id="squareroot" class="btn_advance">
+                <sup>2</sup>&radic;x
+              </button>
+            </td>
+            <td>
+              <button id="cuberoot" class="btn_advance">
+                <sup>3</sup>&radic;x
+              </button>
+            </td>
+            <td>
+              <button id="yroot" class="btn_advance">
+                <sup>y</sup>&radic;x
+              </button>
+            </td>
+            <td><button id="ln" class="btn_advance">ln</button></td>
+            <td>
+              <button id="log" class="btn_advance">log<sub>10</sub></button>
+            </td>
             <td><button id="four" class="btn_number">4</button></td>
             <td><button id="five" class="btn_number">5</button></td>
             <td><button id="six" class="btn_number">6</button></td>
@@ -113,12 +146,12 @@
           </tr>
 
           <tr class="row 4">
-            <td><button id="seven" class="btn_advance">x!</button></td>
-            <td><button id="seven" class="btn_advance">sin</button></td>
-            <td><button id="seven" class="btn_advance">cos</button></td>
-            <td><button id="seven" class="btn_advance">tan</button></td>
-            <td><button id="seven" class="btn_advance">e</button></td>
-            <td><button id="seven" class="btn_advance">EE</button></td>
+            <td><button id="xfact" class="btn_advance">x!</button></td>
+            <td><button id="sin" class="btn_advance">sin</button></td>
+            <td><button id="cos" class="btn_advance">cos</button></td>
+            <td><button id="tan" class="btn_advance">tan</button></td>
+            <td><button id="e" class="btn_advance">e</button></td>
+            <td><button id="ee" class="btn_advance">EE</button></td>
             <td><button id="one" class="btn_number">1</button></td>
             <td><button id="two" class="btn_number">2</button></td>
             <td><button id="three" class="btn_number">3</button></td>
@@ -128,12 +161,12 @@
           </tr>
 
           <tr class="row 5">
-            <td><button id="seven" class="btn_advance">Rad</button></td>
-            <td><button id="seven" class="btn_advance">sinh</button></td>
-            <td><button id="seven" class="btn_advance">cosh</button></td>
-            <td><button id="seven" class="btn_advance">tanh</button></td>
-            <td><button id="seven" class="btn_advance">&pi;</button></td>
-            <td><button id="seven" class="btn_advance">Rand</button></td>
+            <td><button id="rad" class="btn_advance">Rad</button></td>
+            <td><button id="sinh" class="btn_advance">sinh</button></td>
+            <td><button id="cosh" class="btn_advance">cosh</button></td>
+            <td><button id="tanh" class="btn_advance">tanh</button></td>
+            <td><button id="pi" class="btn_advance">&pi;</button></td>
+            <td><button id="rand" class="btn_advance">Rand</button></td>
             <td colspan="2">
               <button id="zero" class="btn_number"><p id="zero">0</p></button>
             </td>
@@ -142,6 +175,10 @@
           </tr>
         </table>
       </div>
+      <div class="footer">
+        Reference iPhone 13, iOS Version 17.5.1
+      </div>
+      
     </main>
     <script src="./js/index.js"></script>
   </body>
