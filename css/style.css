@@ -80,7 +80,7 @@ body {
   transition: 0.05s;
 }
 
-#div_vert #reset {
+#div_vert #reset1 {
   font-size: 120%;
   font-weight: 600;
   color: black;
@@ -113,6 +113,7 @@ body {
 #div_hori .result {
   color: white;
   font-size: 210%;
+  font-weight: 200;
   padding-top: .25em;
   margin-right: 0.2em;
   text-align: right;
@@ -139,6 +140,7 @@ body {
   height: 27px;
   width: 35px;
   font-size: 1em;
+  font-weight: 200;
   background-color: rgb(46, 46, 46);
   border: 0px;
   border-right-width: 0px;
@@ -193,7 +195,7 @@ body {
   transition: 0.05s;
 }
 
-#div_hori #reset {
+#div_hori #reset2 {
   font-size: 90%;
   font-weight: 600;
   color: black;

@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let display = document.querySelector('.result');
-    let AC = document.querySelector('#reset')
+    const display1 = document.querySelector('#result1');
+    const display2 = document.querySelector('#result2');
+    let AC1 = document.querySelector('#reset1')
+    let AC2 = document.querySelector('#reset2')
     let currentInput = '0';
     let operator = null;
     let operand1 = null;
@@ -8,9 +10,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateDisplay() {
         if (currentInput.length > 7) {
-            display.style.fontSize = '250%';
+            display1.style.fontSize = '250%';
         }
-        display.textContent = currentInput;
+        display1.textContent = currentInput;
+        display2.textContent = currentInput;
         console.log(currentInput);
     }
 
@@ -20,7 +23,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 currentInput = this.textContent;
                 shouldResetDisplay = false;
             } else {
-                AC.textContent = 'C';
+                AC1.textContent = 'C';
+                AC2.textContent = 'C';
                 currentInput = currentInput === '0' ? this.textContent : currentInput + this.textContent;
             }
             console.log(currentInput);
@@ -45,10 +49,19 @@ document.addEventListener('DOMContentLoaded', function() {
         calculate();
     });
 
-    document.getElementById('reset').addEventListener('click', function() {
-        AC.textContent = 'AC';
+    document.getElementById('reset1').addEventListener('click', function() {
+        AC1.textContent = 'AC';
         currentInput = '0';
-         display.style.fontSize = '350%'
+        display1.style.fontSize = '350%'
+        operator = null;
+        operand1 = null;
+        shouldResetDisplay = false;
+        updateDisplay();
+    });
+    
+    document.getElementById('reset2').addEventListener('click', function() {
+        AC2.textContent = 'AC';
+        currentInput = '0';
         operator = null;
         operand1 = null;
         shouldResetDisplay = false;
@@ -56,21 +69,31 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     document.getElementById('point').addEventListener('click', function() {
-        if (shouldResetDisplay) {
+        if (shouldResetDisplay && (!currentInput.includes('.'))) {
             currentInput = '0.';
             shouldResetDisplay = false;
         } else if (!currentInput.includes('.')) {
             currentInput += '.';
-        }
+        } 
         updateDisplay();
     });
 
-    document.getElementById('sign').addEventListener('click', function() {
+    document.getElementById('sign1').addEventListener('click', function() {
         currentInput = currentInput.charAt(0) === '-' ? currentInput.slice(1) : '-' + currentInput;
         updateDisplay();
     });
 
-    document.getElementById('percentage').addEventListener('click', function() {
+    document.getElementById('sign2').addEventListener('click', function() {
+        currentInput = currentInput.charAt(0) === '-' ? currentInput.slice(1) : '-' + currentInput;
+        updateDisplay();
+    });
+
+    document.getElementById('percentage1').addEventListener('click', function() {
+        currentInput = (parseFloat(currentInput) / 100).toString();
+        updateDisplay();
+    });
+    
+    document.getElementById('percentage2').addEventListener('click', function() {
         currentInput = (parseFloat(currentInput) / 100).toString();
         updateDisplay();
     });
