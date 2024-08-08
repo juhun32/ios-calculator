@@ -70,8 +70,8 @@ body {
 #div_vert .btn_operator {
   background-color: #e78814;
   color: #fff;
-  font-size: 1.9em;
-  padding-bottom: 0.1em;
+  font-size: 1.7em;
+  padding-bottom: 0.15em;
   transition: 0.4s;
 }
 
@@ -82,7 +82,7 @@ body {
 
 #div_vert #reset1 {
   font-size: 120%;
-  font-weight: 600;
+  font-weight: 500;
   color: black;
 }
 
@@ -93,12 +93,12 @@ body {
   padding-left: 0.35em;
 }
 
-#div_vert #sign {
+#div_vert #sign1 {
   font-size: 180%;
   padding-bottom: 0.2em;
 }
 
-#div_vert #percentage {
+#div_vert #percentage1 {
   font-size: 130%;
   font-weight: 600;
 }
@@ -113,7 +113,7 @@ body {
 #div_hori .result {
   color: white;
   font-size: 210%;
-  font-weight: 200;
+  font-weight: 300;
   padding-top: .25em;
   margin-right: 0.2em;
   text-align: right;
@@ -126,7 +126,8 @@ body {
   text-align: center;
   display: grid;
   place-content: center;
-  width: fit-content;
+  height: 215px;
+  width: 420px;
   margin: auto;
   margin-top: 2em;
   margin-bottom: 2em;
@@ -139,8 +140,8 @@ body {
 #div_hori button {
   height: 27px;
   width: 35px;
-  font-size: 1em;
-  font-weight: 200;
+  font-size: .8em;
+  font-weight: 300;
   background-color: rgb(46, 46, 46);
   border: 0px;
   border-right-width: 0px;
@@ -172,8 +173,8 @@ body {
 #div_hori .btn_operator {
   background-color: #e78814;
   color: #fff;
-  font-size: 1.3em;
-  padding-bottom: 0em;
+  font-size: 1.2em;
+  padding-bottom: 1em;
   transition: 0.4s;
   padding-left: .3em;
 }
@@ -196,8 +197,8 @@ body {
 }
 
 #div_hori #reset2 {
-  font-size: 90%;
-  font-weight: 600;
+  font-size: 80%;
+  font-weight: 500;
   color: black;
 }
 
@@ -208,18 +209,41 @@ body {
   padding-left: 0.45em;
 }
 
-#div_hori #sign {
-  font-size: 120%;
+#div_hori #sign2 {
+  font-size: 110%;
   padding-bottom: 0.2em;
 }
 
-#div_hori #percentage {
-  font-size: 80%;
+#div_hori #percentage2 {
+  font-size: 70%;
   font-weight: 600;
 }
 
 #div_hori #division {
   font-size: 130%;
+}
+
+.home1 {
+  width: 70px;
+  height: 3px;
+  background-color: white;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: -15px;
+  bottom: 0;
+}
+
+.home2 {
+  width: 115px;
+  height: 3px;
+  background-color: white;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1px;
+  bottom: 0;
 }
 
 .footer {
