@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const display2 = document.querySelector("#result2");
   let AC1 = document.querySelector("#reset1");
   let AC2 = document.querySelector("#reset2");
-  let currentInput = "0";
+  let currentInput = "0".substring(0, 21);
   let operator = null;
   let operand1 = null;
   let shouldResetDisplay = false;
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
         AC2.textContent = "C";
         currentInput =
           currentInput === "0"
-            ? this.textContent
-            : currentInput + this.textContent;
+            ? this.textContent.substring(0, 20)
+            : (currentInput + this.textContent).substring(0, 20);
       }
       console.log(currentInput);
       updateDisplay();
@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
         result = Math.exp(value);
         break;
       case "sin":
-        result = Math.sin(value);
+        result = Math.sin((value * Math.PI) / 180);
         break;
       case "cos":
         result = Math.cos(value);
@@ -178,8 +178,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     currentInput = result.toString();
-    if (currentInput.length > 9) {
-      currentInput = currentInput.slice(0, maxLength);
+    if (currentInput.length > 21) {
+      currentInput = currentInput.slice(0, 21);
     }
     updateDisplay();
   }
