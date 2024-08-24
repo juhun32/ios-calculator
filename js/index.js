@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let operator = null;
   let operand1 = null;
   let shouldResetDisplay = false;
+  let memory = 0;
 
   function updateDisplay() {
     if (currentInput.length > 7) {
@@ -143,12 +144,32 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(result, value);
 
     switch (operation) {
+      // first row
+      case "mc":
+        memory = 0;
+        break;
+      case "mplus":
+        memory += parseInt(value);
+        break;
+      case "mminus":
+        memory -= parseInt(value);
+        break;
+      case "mr":
+        result = memory.toString();
+        break;
+
+      // second row
       case "square":
         result = Math.pow(value, 2);
         break;
       case "cube":
         result = Math.pow(value, 3);
         break;
+      case "exp":
+        result = Math.exp(value);
+        break;
+
+      // third row
       case "sqrt":
         result = Math.sqrt(value);
         break;
@@ -161,18 +182,21 @@ document.addEventListener("DOMContentLoaded", function () {
       case "ln":
         result = Math.log(value);
         break;
-      case "exp":
-        result = Math.exp(value);
-        break;
+
+      // fourth row
       case "sin":
         result = Math.sin((value * Math.PI) / 180);
         break;
       case "cos":
-        result = Math.cos(value);
+        result = Math.cos((value * Math.PI) / 180);
         break;
       case "tan":
-        result = Math.tan(value);
+        result = Math.tan((value * Math.PI) / 180);
         break;
+
+      // last row
+      case "rad":
+        result = (value * Math.PI) / 180.0;
       default:
         return;
     }
@@ -184,6 +208,32 @@ document.addEventListener("DOMContentLoaded", function () {
     updateDisplay();
   }
 
+  function factorialize(num) {
+    if (num < 0) return -1;
+    else if (num == 0) return 1;
+    else {
+      return num * factorialize(num - 1);
+    }
+  }
+
+  // top row advance calc
+  document.getElementById("mc").addEventListener("click", function () {
+    advancedCalculate("mc");
+  });
+
+  document.getElementById("mplus").addEventListener("click", function () {
+    advancedCalculate("mplus");
+  });
+
+  document.getElementById("mminus").addEventListener("click", function () {
+    advancedCalculate("mminus");
+  });
+
+  document.getElementById("mr").addEventListener("click", function () {
+    advancedCalculate("mr");
+  });
+
+  // second row advance calc
   document.getElementById("square").addEventListener("click", function () {
     advancedCalculate("square");
   });
@@ -192,6 +242,11 @@ document.addEventListener("DOMContentLoaded", function () {
     advancedCalculate("cube");
   });
 
+  document.getElementById("exp").addEventListener("click", function () {
+    advancedCalculate("exp");
+  });
+
+  // third row advance calc
   document.getElementById("sqrt").addEventListener("click", function () {
     advancedCalculate("sqrt");
   });
@@ -200,16 +255,19 @@ document.addEventListener("DOMContentLoaded", function () {
     advancedCalculate("cuberoot");
   });
 
-  document.getElementById("log").addEventListener("click", function () {
-    advancedCalculate("log");
-  });
-
   document.getElementById("ln").addEventListener("click", function () {
     advancedCalculate("ln");
   });
 
-  document.getElementById("exp").addEventListener("click", function () {
-    advancedCalculate("exp");
+  document.getElementById("log").addEventListener("click", function () {
+    advancedCalculate("log");
+  });
+
+  // fourth row advance calc
+  document.getElementById("xfact").addEventListener("click", function () {
+    console.log(currentInput);
+    currentInput = factorialize(parseInt(currentInput));
+    updateDisplay();
   });
 
   document.getElementById("sin").addEventListener("click", function () {
@@ -222,5 +280,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.getElementById("tan").addEventListener("click", function () {
     advancedCalculate("tan");
+  });
+
+  // last row advance calc
+  document.getElementById("rad").addEventListener("click", function () {
+    advancedCalculate("rad");
+  });
+
+  document.getElementById("sinh").addEventListener("click", function () {
+    advancedCalculate("sinh");
+  });
+
+  document.getElementById("cosh").addEventListener("click", function () {
+    advancedCalculate("cosh");
+  });
+
+  document.getElementById("tanh").addEventListener("click", function () {
+    advancedCalculate("tanh");
+  });
+
+  document.getElementById("pi").addEventListener("click", function () {
+    advancedCalculate("pi");
+  });
+
+  document.getElementById("rand").addEventListener("click", function () {
+    advancedCalculate("rand");
   });
 });
