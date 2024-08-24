@@ -22,7 +22,7 @@ body {
 
 .container_vert {
   background-color: black;
-  display: absolute;
+  /* display:block; */
   text-align: center;
   /* display: grid; */
   place-content: end;
