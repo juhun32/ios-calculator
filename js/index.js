@@ -170,6 +170,8 @@ document.addEventListener("DOMContentLoaded", function () {
         break;
 
       // third row
+      case "divx":
+        result = 1 / value;
       case "sqrt":
         result = Math.sqrt(value);
         break;
@@ -247,6 +249,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // third row advance calc
+  document.getElementById("divx").addEventListener("click", function () {
+    advancedCalculate("divx");
+  });
+
   document.getElementById("sqrt").addEventListener("click", function () {
     advancedCalculate("sqrt");
   });
